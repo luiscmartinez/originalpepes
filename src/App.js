@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Navigation from './components/Navigation'
+import './App.css'
+import { Route, Link } from 'react-router-dom'
+import Home from './components/Home'
+import Footer from './components/Footer'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className='main_div'>
+        <img
+          className='logo'
+          src={
+            'http://theoriginalpepes.com/wp-content/uploads/2016/07/new_logo.png'
+          }
+        />
+        <Navigation />
+        <Route exact path='/' component={Home} />
+        <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
