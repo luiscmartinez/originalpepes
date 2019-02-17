@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Menu = () => {
   return (
@@ -160,7 +161,137 @@ const Menu = () => {
       </ul>
       <h3>* * BREAKFAST * *</h3>
       <p>SERVED ALL DAY STARTING AT 6AM</p>
-      <h4>BREAKFAST BURRIOTS</h4>
+      <h4>BREAKFAST BURRITOS</h4>
+      <ul>
+        <li>
+          <strong>BREAKFAST BURRITO</strong>{' '}
+          <p>
+            Ham, Bacon or Sausage, Eggs, potatoes, Beans, Cheese & Green Sauce
+          </p>
+        </li>
+        <li>
+          <strong>PEPE'S BREAKFAST BURRITO</strong>{' '}
+          <p>
+            Ham, Bacon or Sausage, Eggs, Potatoes, Beans, Cheese, Rice,
+            Guacamole & Green Sauce Wet
+          </p>
+        </li>
+        <li>
+          <strong>HUEVOS A LA MEXICANA</strong>{' '}
+          <p>Eggs, Tomatoes, Bell Peppers, Onions & Beans </p>
+        </li>
+        <li>
+          <strong>CHILAQUILES BURRITO</strong>{' '}
+          <p>Eggs, Chips, Onions, Tomatoes, , Green Sauce, Cheese & Beans</p>
+        </li>
+        <li>
+          <strong>MACHACA BURRITO</strong>{' '}
+          <p>Eggs, Shredded Beef, Onions, Bell Peppers, Tomatoes & Beans</p>
+        </li>
+        <li>
+          <strong>CHORIZO BURRITO</strong> <p>with Beans</p>
+        </li>
+        <li>
+          <strong>CHORIZO & EGG BURRITO</strong> <p>Beans or potatoes</p>
+        </li>
+        <li>
+          <strong>EGG BURRITO</strong>{' '}
+          <p>Beans & Cheese (Ham, Bacon or Sausage, available)</p>
+        </li>
+      </ul>
+      <h4>BREAKFAST PLATES</h4>
+      <p>
+        ALL PLATES ARE SERVED WITH: <br /> Beans w/Cheese, Rice w/Green Sauce,
+        Guacamole & Flour or Corn Tortillas
+      </p>
+      <ul>
+        <li>
+          <strong>PEPE'S BREAKFAST PLATE</strong>{' '}
+          <p>Ham, Bacon or Sausage, Eggs, Potatoes, Cheese & Green Sauce</p>
+        </li>
+        <li>
+          <strong>CHILAQUILES</strong>{' '}
+          <p>Eggs, Chips, Onions, Tomatoes, Green Sauce & Cheese</p>
+        </li>
+        <li>
+          <strong>HUEVOS A LA MEXICANA</strong>{' '}
+          <p>Eggs, Onion, Tomatoes & Bell Pepper</p>
+        </li>
+        <li>
+          <strong>CHILAQUILES</strong>{' '}
+          <p>Eggs, Chips, Onions, Tomatoes, Green Sauce & Cheese</p>
+        </li>
+        <li>
+          <strong>MACHACA</strong>{' '}
+          <p>Eggs, Shredded Beef, Onions, Tomatoes & Bell Peppers</p>
+        </li>
+        <li>
+          <strong>CHORIZO & EGGS</strong> <p>Potatoes available</p>
+        </li>
+        <li>
+          <strong>HUEVOS RANCHEROS</strong>{' '}
+          <p>2 Corn Tortillas, Eggs Green Sauce & Cheese</p>
+        </li>
+      </ul>
+      <h4>BREAKFAST A LA CARTE</h4>
+      <ul>
+        <li>
+          <strong>TWO PEPES BREAKFAST TACOS</strong>{' '}
+          <p>
+            Ham, Bacon or Sausage, Eggs, Potatoes, Beans, Cheese & Green Sauce
+          </p>
+        </li>
+        <li>
+          <strong>TWO CHORIZO TACOS</strong> <p>With Beans & Cheese</p>
+        </li>
+        <li>
+          <strong>TWO CHORIZO & EGG TACOS</strong> <p>With Beans & Cheese</p>
+        </li>
+        <li>
+          <strong>TWO CHORIZO EGG & POTATO TACOS</strong>{' '}
+          <p>With Beans & Cheese</p>
+        </li>
+        <li>
+          <strong>TWO MACHACA TACOS</strong>{' '}
+          <p>Eggs, Shredded Beef, Onions, Bell Pepper & Tomatoes</p>
+        </li>
+        <li>
+          <strong>TWO HUEVOS A LA MEXICANA TACOS</strong>{' '}
+          <p>Eggs, Tomatoes, Onions & Bell Pepper</p>
+        </li>
+        <li>
+          <strong>BREAKFAST QUESADILLA</strong>{' '}
+          <p>Ham, Bacon or Sausage, Eggs, Potatoes, Green Sauce & Cheese</p>
+        </li>
+        <li>
+          <strong>MACHACA QUESADILLA</strong>{' '}
+          <p>
+            Eggs, Shredded Beef, Onions, Bell Peppers, Tomatoes, Green Sauce &
+            Cheese
+          </p>
+        </li>
+        <li>
+          <strong>HUEVOS A LA MEXICANA QUESADILLA</strong>{' '}
+          <p>Eggs, Onions, Bell Peppers, Tomatoes, Green Sauce & Cheese</p>
+        </li>
+        <li>
+          <strong>BREAKFAST BOWL</strong>{' '}
+          <p>
+            Ham, Bacon or Sausage, Eggs, Potatoes, Beans, Rice, Green Sauce,
+            Cheese, (Your Choice of Flour or Corn Tortillas)
+          </p>
+        </li>
+        <li>
+          <strong>BREAKFAST NACHOS</strong>{' '}
+          <p>
+            Ham, Bacon or Sausage, Eggs, Potatoes, Beans, Rice, Green Sauce,
+            Guacamole & Cheese
+          </p>
+        </li>
+      </ul>
+      <h2>
+        <Link to='/catering'>View Catering Menu</Link>
+      </h2>
     </div>
   )
 }
