@@ -5,6 +5,7 @@ import { Route, Link } from 'react-router-dom'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import Menu from './components/Menu'
+import Cartering from './components/Cartering'
 
 class App extends Component {
   render () {
@@ -19,6 +20,7 @@ class App extends Component {
         <Navigation />
         <Route exact path='/' component={Home} />
         <Route path='/menu' component={Menu} />
+        <Route path='/cartering' component={Cartering} />
         <Footer />
       </div>
     )
