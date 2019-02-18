@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Menu from './components/Menu'
 import Cartering from './components/Cartering'
 import About from './components/About'
+import Contact from './components/Contact'
 
 class App extends Component {
   render () {
@@ -23,6 +24,7 @@ class App extends Component {
         <Route path='/menu' component={Menu} />
         <Route path='/catering' component={Cartering} />
         <Route path='/about' component={About} />
+        <Route path='/contact' component={Contact} />
         <Footer />
       </div>
     )
