@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import Menu from './components/Menu'
 import Cartering from './components/Cartering'
+import About from './components/About'
 
 class App extends Component {
   render () {
@@ -21,6 +22,7 @@ class App extends Component {
         <Route exact path='/' component={Home} />
         <Route path='/menu' component={Menu} />
         <Route path='/catering' component={Cartering} />
+        <Route path='/about' component={About} />
         <Footer />
       </div>
     )
