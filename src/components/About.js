@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
+    <div className='cta_container'>
       <h3>History</h3>
       <p>
         Pepe’s was founded in Southern California in 1962 by two brothers, Joe

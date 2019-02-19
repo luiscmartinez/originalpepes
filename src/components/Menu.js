@@ -1,37 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Combination_plates from './menu_component/Combination-plates'
 
 const Menu = () => {
   return (
-    <div className='home_container'>
-      <h3>* * COMBINATION PLATES * *</h3>
-      <p>
-        All Plates Come With Beans, Cheese, Rice with Green Sauce & Guacamole
-      </p>
+    <div className='cta_container'>
+      <Combination_plates />
       <ul>
-        <li>#1 GREEN CHILE PORK*</li>
-        <li>#2 RED CHILE BEEF*</li>
-        <li>#3 TWO CHEESE ENCHILADAS</li>
-        <li>#4 TWO BEEF ENCHILADAS</li>
-        <li>#5 ONE CHEESE ENCHILADA & ONE HARD TACO</li>
-        <li>#6 ONE BEEF ENCHILADA & ONE HARD TACO</li>
-        <li>#7 TWO TAQUITOS WITH GUACAMOLE</li>
-        <li>#8 TWO HARD TACOS</li>
-        <li>#9 TWO CHILE RELLENOS*</li>
-        <li>#10 MACHACA*</li>
-        <li>#11 CARNITAS*</li>
-        <li>#12 CARME ASADA*</li>
-        <li>#13 STEAK PICAD0*</li>
-        <li>#14 CHORIZO & EGGS*</li>
-        <li>#15 ONE CHILE RELLENO & ONE TACO</li>
-        <li>#16 HUEVOS RANCHEROS*</li>
-        <li>#17 HUEVOS A LA MEXICANA*</li>
-        <span>* comes with your choice of tortillas</span>
-        <li>KIDS MEALS</li>
-        <span>
-          Kid Size Beans & Cheese Burrito or Quesadilla, Fries, Drink, & a
-          Surprise
-        </span>
+        <li>
+          KIDS MEALS
+          <p>
+            Kid Size Beans & Cheese Burrito or Quesadilla, Fries, Drink, & a
+            Surprise
+          </p>
+        </li>
       </ul>
       <h3>* * LUNCH & DINNER * *</h3>
       <h4>A LA CARTE</h4>
