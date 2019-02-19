@@ -10,10 +10,33 @@ import About from './components/About'
 import Contact from './components/Contact'
 
 class App extends Component {
+  handleClassName = () => {
+    switch (window.location.pathname) {
+      case '/':
+        return 'pimg1'
+        break
+      case '/menu':
+        return 'pimg2'
+        break
+      case '/catering':
+        return 'pimg3'
+        break
+      case '/about':
+        return 'pimg4'
+        break
+      case '/contact':
+        return 'pimg5'
+        break
+      default:
+        break
+    }
+  }
   render () {
+    console.log(window.location.pathname === '/')
+
     return (
       <div className='main_div'>
-        <div className='pimg1'>
+        <div className={this.handleClassName()}>
           <img
             className='logo'
             src={
