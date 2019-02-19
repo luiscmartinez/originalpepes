@@ -31,10 +31,7 @@ a {
   margin-top: 160px;
   word-wrap: break-word;
 }
-.inner_nav a {
-  font-weight: bold;
-  color: black;
-}
+
 .link {
   font-size: 2rem;
   letter-spacing: 5px;
@@ -72,8 +69,14 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 50%;
+  width: 35%;
   align-items: center;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.inner_nav a {
+  color: black;
 }
 .cartering_container {
   max-width: 1000px;
