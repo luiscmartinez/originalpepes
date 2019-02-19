@@ -8,7 +8,7 @@ const Menu = () => {
       <Combination_plates />
       <ul>
         <li>
-          KIDS MEALS
+          <strong>KIDS MEALS</strong>
           <p>
             Kid Size Beans & Cheese Burrito or Quesadilla, Fries, Drink, & a
             Surprise
@@ -271,9 +271,10 @@ const Menu = () => {
           </p>
         </li>
       </ul>
-      <h2>
-        <Link to='/catering'>View Catering Menu</Link>
-      </h2>
+
+      <Link className='link' to='/catering'>
+        View Catering Menu &#8594;
+      </Link>
     </div>
   )
 }

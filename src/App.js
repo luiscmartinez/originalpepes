@@ -13,12 +13,14 @@ class App extends Component {
   render () {
     return (
       <div className='main_div'>
-        <img
-          className='logo'
-          src={
-            'http://theoriginalpepes.com/wp-content/uploads/2016/07/new_logo.png'
-          }
-        />
+        <div className='pimg1'>
+          <img
+            className='logo'
+            src={
+              'http://theoriginalpepes.com/wp-content/uploads/2016/07/new_logo.png'
+            }
+          />
+        </div>
         <Navigation />
         <Route exact path='/' component={Home} />
         <Route path='/menu' component={Menu} />

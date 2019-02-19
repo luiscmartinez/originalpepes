@@ -14,6 +14,7 @@ const About = () => {
         nephew “Pepe” was sent to fight in Vietnam. This is when Joe and Tony,
         out of love for their nephew, renamed the restaurant in honor of him.
       </p>
+      <br />
       <p>
         In the following years, the restaurant had become a great success.
         However, in 1976 Tony passed away leaving Joe and his wife Maria to run
@@ -23,6 +24,7 @@ const About = () => {
         locations in Los Angeles, Orange County, and in San Bernardino County.
         Still owned and operated by the Russi Family.
       </p>
+      <br />
       <p>
         The restaurants are continuously serving Southern California with high
         quality fresh Mexican food. Keeping their secret recipes inside the

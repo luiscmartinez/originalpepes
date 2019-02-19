@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Combination_plates = () => {
   return (
@@ -67,6 +68,9 @@ const Combination_plates = () => {
         </li>
         <span>* comes with your choice of tortillas</span>
       </ul>
+      <Link className='link' to='/menu'>
+        VIEW FULL MENU &#8594;
+      </Link>
     </div>
   )
 }

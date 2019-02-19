@@ -6,10 +6,9 @@ const Home = () => {
   return (
     <div className='home_container'>
       <Combination_plates />
-      <Link to='/menu'>
-        <h1>VIEW FULL MENU</h1>
-      </Link>
-      <h1>FINEST MEXICAN GRILL</h1>
+      <div className='home_cta'>
+        <strong>FINEST MEXICAN GRILL</strong>
+      </div>
       <div>
         <p>insert images here lol</p>
       </div>
