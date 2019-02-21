@@ -27,7 +27,9 @@ a {
 }
 .grid {
   height: 10rem;
+  margin: 10px;
 }
+
 .home_cta {
   display: block;
   background-color: white;
