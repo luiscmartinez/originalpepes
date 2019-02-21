@@ -14,10 +14,6 @@ import chiles from '../images/chiles (1).jpg'
 class Home extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {
-      x: 0,
-      y: 0
-    }
     this.myRef = React.createRef()
     this.myRef2 = React.createRef()
   }
@@ -61,7 +57,6 @@ class Home extends React.Component {
     }
   }
   render () {
-    const { x, y } = this.state
     return (
       <div className='home_container'>
         <Combination_plates />
