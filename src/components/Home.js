@@ -10,6 +10,7 @@ import orange_salsa from '../images/catering_hero (1).jpg'
 import burrito from '../images/menu_hero (1).jpg'
 import red_salsa from '../images/contact_hero (1).jpg'
 import chiles from '../images/chiles (1).jpg'
+import { TweenMax } from 'gsap'
 
 class Home extends React.Component {
   constructor (props) {
@@ -23,13 +24,18 @@ class Home extends React.Component {
     this.myRef7 = React.createRef()
     this.myRef8 = React.createRef()
     this.myRef9 = React.createRef()
+    this.overlay = React.createRef()
   }
 
-  _onMouseMove = (e, ref) => {
-    const edge = this.closestEdge(ref, e)
+  _onMouseMove = (e, ref, overlay) => {
+    const edge = this.closestEdge(ref, e, overlay)
     console.log(edge)
   }
-  closestEdge = (elem, e) => {
+  _onMouseLeave = (e, ref, overlay) => {
+    const edge = this.closestEdges(ref, e, overlay)
+    console.log(edge)
+  }
+  closestEdges = (elem, e, overlay) => {
     const elemBounding = elem.current.getBoundingClientRect()
     console.log(elemBounding)
 
@@ -54,13 +60,63 @@ class Home extends React.Component {
 
     switch (min) {
       case leftEdgeDist:
-        return 'left'
+        TweenMax.to(overlay.current, 0.5, { left: '-100%' })
+        break
       case rightEdgeDist:
-        return 'right'
+        TweenMax.to(overlay.current, 0.5, { left: '100%' })
+        break
       case topEdgeDist:
-        return 'top'
+        TweenMax.to(overlay.current, 0.5, { top: '-100%' })
+        break
       case bottomEdgeDist:
-        return 'bottom'
+        TweenMax.to(overlay.current, 0.5, { top: '100%' })
+        break
+    }
+  }
+  closestEdge = (elem, e, overlay) => {
+    const elemBounding = elem.current.getBoundingClientRect()
+    console.log(elemBounding)
+
+    const elementLeftEdge = elemBounding.left
+    const elementTopEdge = elemBounding.top
+    const elementRightEdge = elemBounding.right
+    const elementBottomEdge = elemBounding.bottom
+    const mouseX = e.clientX
+    const mouseY = e.clientY
+
+    const topEdgeDist = Math.abs(elementTopEdge - mouseY)
+    const bottomEdgeDist = Math.abs(elementBottomEdge - mouseY)
+    const leftEdgeDist = Math.abs(elementLeftEdge - mouseX)
+    const rightEdgeDist = Math.abs(elementRightEdge - mouseX)
+
+    const min = Math.min(
+      topEdgeDist,
+      bottomEdgeDist,
+      leftEdgeDist,
+      rightEdgeDist
+    )
+
+    switch (min) {
+      case leftEdgeDist:
+        overlay.current.style.top = '0%'
+        overlay.current.style.left = '-100%'
+        TweenMax.to(overlay.current, 0.5, { left: '0%' })
+        break
+      case rightEdgeDist:
+        overlay.current.style.top = '0%'
+        overlay.current.style.left = '100%'
+        TweenMax.to(overlay.current, 0.5, { left: '0%' })
+        break
+      case topEdgeDist:
+        overlay.current.style.top = '-100%'
+        overlay.current.style.left = '0%'
+        TweenMax.to(overlay.current, 0.5, { top: '0%' })
+        break
+      case bottomEdgeDist:
+        overlay.current.style.top = '100%'
+        overlay.current.style.left = '0%'
+        TweenMax.to(overlay.current, 0.5, { top: '0%' })
+        break
     }
   }
   render () {
@@ -71,15 +127,23 @@ class Home extends React.Component {
           <strong>FINEST MEXICAN GRILL</strong>
         </div>
         <div className='grid_container'>
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef)}
+          <div
+            className='boxes'
+            onMouseEnter={(e) => this._onMouseMove(e, this.myRef, this.overlay)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef, this.overlay)}
             ref={this.myRef}
-            className='grid'
-            id='slide'
-            src={image}
-            alt='enchilada plate'
-          />
+          >
+            <img
+              className='grid'
+              id='slide'
+              src={image}
+              alt='enchilada plate'
+            />
+            <div ref={this.overlay} className='overlay'>
+              SVG here
+            </div>
+          </div>
           <img
             onMouseEnter={(e) => this._onMouseMove(e, this.myRef2)}
             onMouseLeave={(e) => this._onMouseMove(e, this.myRef2)}
