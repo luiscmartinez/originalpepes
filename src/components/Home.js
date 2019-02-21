@@ -16,11 +16,18 @@ class Home extends React.Component {
     super(props)
     this.myRef = React.createRef()
     this.myRef2 = React.createRef()
+    this.myRef3 = React.createRef()
+    this.myRef4 = React.createRef()
+    this.myRef5 = React.createRef()
+    this.myRef6 = React.createRef()
+    this.myRef7 = React.createRef()
+    this.myRef8 = React.createRef()
+    this.myRef9 = React.createRef()
   }
 
-  _onMouseMove = (e, ref) => {
+  _onMouseMove = (e, ref, lol) => {
     const edge = this.closestEdge(ref, e)
-    console.log(edge)
+    console.log(lol, edge)
   }
   closestEdge = (elem, e) => {
     const elemBounding = elem.current.getBoundingClientRect()
@@ -69,6 +76,7 @@ class Home extends React.Component {
             onMouseLeave={(e) => this._onMouseMove(e, this.myRef)}
             ref={this.myRef}
             className='grid'
+            id='slide'
             src={image}
             alt='enchilada plate'
           />
@@ -80,15 +88,64 @@ class Home extends React.Component {
             src={tacos_img}
             alt='tacos'
           />
-          <img className='grid' src={green_salsa} alt='green salsa' />
+          <img
+            onMouseEnter={(e) => this._onMouseMove(e, this.myRef3)}
+            onMouseLeave={(e) => this._onMouseMove(e, this.myRef3)}
+            ref={this.myRef3}
+            className='grid'
+            src={green_salsa}
+            alt='green salsa'
+          />
           <br />
-          <img className='grid' src={chips} alt='chips & salsa' />
-          <img className='grid' src={taquitos} alt='taquitos and guac' />
-          <img className='grid' src={orange_salsa} alt='orange_salsa' />
+          <img
+            onMouseEnter={(e) => this._onMouseMove(e, this.myRef4)}
+            onMouseLeave={(e) => this._onMouseMove(e, this.myRef4)}
+            ref={this.myRef4}
+            className='grid'
+            src={chips}
+            alt='chips & salsa'
+          />
+          <img
+            onMouseEnter={(e) => this._onMouseMove(e, this.myRef5)}
+            onMouseLeave={(e) => this._onMouseMove(e, this.myRef5)}
+            ref={this.myRef5}
+            className='grid'
+            src={taquitos}
+            alt='taquitos and guac'
+          />
+          <img
+            onMouseEnter={(e) => this._onMouseMove(e, this.myRef6)}
+            onMouseLeave={(e) => this._onMouseMove(e, this.myRef6)}
+            ref={this.myRef6}
+            className='grid'
+            src={orange_salsa}
+            alt='orange_salsa'
+          />
           <br />
-          <img className='grid' src={burrito} alt='asada burrito' />
-          <img className='grid' src={red_salsa} alt='red_salsa' />
-          <img className='grid' src={chips} alt='chips & salsa' />
+          <img
+            onMouseEnter={(e) => this._onMouseMove(e, this.myRef7)}
+            onMouseLeave={(e) => this._onMouseMove(e, this.myRef7)}
+            ref={this.myRef7}
+            className='grid'
+            src={burrito}
+            alt='asada burrito'
+          />
+          <img
+            onMouseEnter={(e) => this._onMouseMove(e, this.myRef8)}
+            onMouseLeave={(e) => this._onMouseMove(e, this.myRef8)}
+            ref={this.myRef8}
+            className='grid'
+            src={red_salsa}
+            alt='red_salsa'
+          />
+          <img
+            onMouseEnter={(e) => this._onMouseMove(e, this.myRef9)}
+            onMouseLeave={(e) => this._onMouseMove(e, this.myRef9)}
+            ref={this.myRef9}
+            className='grid'
+            src={chips}
+            alt='chips & salsa'
+          />
         </div>
       </div>
     )
