@@ -25,9 +25,9 @@ class Home extends React.Component {
     this.myRef9 = React.createRef()
   }
 
-  _onMouseMove = (e, ref, lol) => {
+  _onMouseMove = (e, ref) => {
     const edge = this.closestEdge(ref, e)
-    console.log(lol, edge)
+    console.log(edge)
   }
   closestEdge = (elem, e) => {
     const elemBounding = elem.current.getBoundingClientRect()
