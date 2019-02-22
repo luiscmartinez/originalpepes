@@ -149,7 +149,9 @@ class Home extends React.Component {
               alt='enchilada plate'
             />
             <div ref={this.overlay} className='overlay'>
-              SVG here
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
             </div>
           </div>
           <div
@@ -161,9 +163,7 @@ class Home extends React.Component {
             ref={this.myRef2}
           >
             <img className='grid' src={tacos_img} alt='tacos' />
-            <div ref={this.overlay2} className='overlay'>
-              SVG here
-            </div>
+            <div ref={this.overlay2} className='overlay' />
           </div>
           <div
             className='boxes'
