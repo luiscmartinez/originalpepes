@@ -163,7 +163,11 @@ class Home extends React.Component {
             ref={this.myRef2}
           >
             <img className='grid' src={tacos_img} alt='tacos' />
-            <div ref={this.overlay2} className='overlay' />
+            <div ref={this.overlay2} className='overlay'>
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
+            </div>
           </div>
           <div
             className='boxes'
@@ -175,7 +179,9 @@ class Home extends React.Component {
           >
             <img className='grid' src={green_salsa} alt='green salsa' />
             <div ref={this.overlay3} className='overlay'>
-              SVG here
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
             </div>
           </div>
           <br />
@@ -189,7 +195,9 @@ class Home extends React.Component {
           >
             <img className='grid' src={chips} alt='chips & salsa' />
             <div ref={this.overlay4} className='overlay'>
-              SVG here
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
             </div>
           </div>
           <div
@@ -202,7 +210,9 @@ class Home extends React.Component {
           >
             <img className='grid' src={taquitos} alt='taquitos and guac' />
             <div ref={this.overlay5} className='overlay'>
-              SVG here
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
             </div>
           </div>
           <div
@@ -215,7 +225,9 @@ class Home extends React.Component {
           >
             <img className='grid' src={orange_salsa} alt='orange_salsa' />
             <div ref={this.overlay6} className='overlay'>
-              SVG here
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
             </div>
           </div>
           <br />
@@ -229,7 +241,9 @@ class Home extends React.Component {
           >
             <img className='grid' src={burrito} alt='asada burrito' />
             <div ref={this.overlay7} className='overlay'>
-              SVG here
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
             </div>
           </div>
           <div
@@ -242,7 +256,9 @@ class Home extends React.Component {
           >
             <img className='grid' src={red_salsa} alt='red_salsa' />
             <div ref={this.overlay8} className='overlay'>
-              SVG here
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
             </div>
           </div>
           <div
@@ -255,7 +271,9 @@ class Home extends React.Component {
           >
             <img className='grid' src={chips} alt='chips & salsa' />
             <div ref={this.overlay9} className='overlay'>
-              SVG here
+              <div className='circle'>
+                <i className='fas fa-search-plus' />
+              </div>
             </div>
           </div>
         </div>
