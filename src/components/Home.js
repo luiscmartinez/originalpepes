@@ -25,6 +25,14 @@ class Home extends React.Component {
     this.myRef8 = React.createRef()
     this.myRef9 = React.createRef()
     this.overlay = React.createRef()
+    this.overlay2 = React.createRef()
+    this.overlay3 = React.createRef()
+    this.overlay4 = React.createRef()
+    this.overlay5 = React.createRef()
+    this.overlay6 = React.createRef()
+    this.overlay7 = React.createRef()
+    this.overlay8 = React.createRef()
+    this.overlay9 = React.createRef()
   }
 
   _onMouseMove = (e, ref, overlay) => {
@@ -144,72 +152,112 @@ class Home extends React.Component {
               SVG here
             </div>
           </div>
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef2)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef2)}
+          <div
+            className='boxes'
+            onMouseEnter={(e) =>
+              this._onMouseMove(e, this.myRef2, this.overlay2)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef2, this.overlay2)}
             ref={this.myRef2}
-            className='grid'
-            src={tacos_img}
-            alt='tacos'
-          />
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef3)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef3)}
+          >
+            <img className='grid' src={tacos_img} alt='tacos' />
+            <div ref={this.overlay2} className='overlay'>
+              SVG here
+            </div>
+          </div>
+          <div
+            className='boxes'
+            onMouseEnter={(e) =>
+              this._onMouseMove(e, this.myRef3, this.overlay3)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef3, this.overlay3)}
             ref={this.myRef3}
-            className='grid'
-            src={green_salsa}
-            alt='green salsa'
-          />
+          >
+            <img className='grid' src={green_salsa} alt='green salsa' />
+            <div ref={this.overlay3} className='overlay'>
+              SVG here
+            </div>
+          </div>
           <br />
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef4)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef4)}
+          <div
+            className='boxes'
+            onMouseEnter={(e) =>
+              this._onMouseMove(e, this.myRef4, this.overlay4)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef4, this.overlay4)}
             ref={this.myRef4}
-            className='grid'
-            src={chips}
-            alt='chips & salsa'
-          />
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef5)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef5)}
+          >
+            <img className='grid' src={chips} alt='chips & salsa' />
+            <div ref={this.overlay4} className='overlay'>
+              SVG here
+            </div>
+          </div>
+          <div
+            className='boxes'
+            onMouseEnter={(e) =>
+              this._onMouseMove(e, this.myRef5, this.overlay5)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef5, this.overlay5)}
             ref={this.myRef5}
-            className='grid'
-            src={taquitos}
-            alt='taquitos and guac'
-          />
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef6)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef6)}
+          >
+            <img className='grid' src={taquitos} alt='taquitos and guac' />
+            <div ref={this.overlay5} className='overlay'>
+              SVG here
+            </div>
+          </div>
+          <div
+            className='boxes'
+            onMouseEnter={(e) =>
+              this._onMouseMove(e, this.myRef6, this.overlay6)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef6, this.overlay6)}
             ref={this.myRef6}
-            className='grid'
-            src={orange_salsa}
-            alt='orange_salsa'
-          />
+          >
+            <img className='grid' src={orange_salsa} alt='orange_salsa' />
+            <div ref={this.overlay6} className='overlay'>
+              SVG here
+            </div>
+          </div>
           <br />
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef7)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef7)}
+          <div
+            className='boxes'
+            onMouseEnter={(e) =>
+              this._onMouseMove(e, this.myRef7, this.overlay7)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef7, this.overlay7)}
             ref={this.myRef7}
-            className='grid'
-            src={burrito}
-            alt='asada burrito'
-          />
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef8)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef8)}
+          >
+            <img className='grid' src={burrito} alt='asada burrito' />
+            <div ref={this.overlay7} className='overlay'>
+              SVG here
+            </div>
+          </div>
+          <div
+            className='boxes'
+            onMouseEnter={(e) =>
+              this._onMouseMove(e, this.myRef8, this.overlay8)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef8, this.overlay8)}
             ref={this.myRef8}
-            className='grid'
-            src={red_salsa}
-            alt='red_salsa'
-          />
-          <img
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef9)}
-            onMouseLeave={(e) => this._onMouseMove(e, this.myRef9)}
+          >
+            <img className='grid' src={red_salsa} alt='red_salsa' />
+            <div ref={this.overlay8} className='overlay'>
+              SVG here
+            </div>
+          </div>
+          <div
+            className='boxes'
+            onMouseEnter={(e) =>
+              this._onMouseMove(e, this.myRef9, this.overlay9)}
+            onMouseLeave={(e) =>
+              this._onMouseLeave(e, this.myRef9, this.overlay9)}
             ref={this.myRef9}
-            className='grid'
-            src={chips}
-            alt='chips & salsa'
-          />
+          >
+            <img className='grid' src={chips} alt='chips & salsa' />
+            <div ref={this.overlay9} className='overlay'>
+              SVG here
+            </div>
+          </div>
         </div>
       </div>
     )
