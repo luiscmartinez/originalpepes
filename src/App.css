@@ -56,7 +56,7 @@ a {
   top: 0%;
   left: -100%;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 .circle {
@@ -176,29 +176,70 @@ a {
 .cartering_container {
   max-width: 1000px;
   border: 2px solid aqua;
+  display:flex;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+.cartering_container h3 {
+  align-self:center;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+}
+.cartering_container h3:before {
+  content: "* * ";
+  font-wight:400;
+  letter-spacing: 3px;
+  position: relative;
+  top: 3px;
+}
+.cartering_container h3:after {
+  content: "* *";
+  font-wight:400;
+  letter-spacing: 3px;
+  position: relative;
+  top: 3px;
 }
 /* =====Combination_plates======== */
 .cta_container {
   border: 2px solid blue;
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 50%;
   align-self: center;
   background: white;
   padding: 90px;
+}
+.about_container {
+  padding: 8%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.about_container p{
+  font-size: 19px;
+  line-height: 26px;
+  /* font-weight: 500; */
+}
+.about_container h3 {
+  font-weight: 400;
+}
+.hidden {
+  display:none;
 }
 .cta_container h3,
 h4 {
   align-self: center;
 }
 .cta_container ul li {
-  margin: 0 0 30px 0;
+  margin: 0 0 40px 0;
 }
 .cta_container ul p,
 p,
 span {
   color: #7e7e84;
   font-weight: 500;
+  margin-top: 10px;
 }
 .cta_container h3 {
 }

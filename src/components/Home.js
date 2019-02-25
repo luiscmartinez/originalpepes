@@ -68,16 +68,16 @@ class Home extends React.Component {
 
     switch (min) {
       case leftEdgeDist:
-        TweenMax.to(overlay.current, 0.5, { left: '-100%' })
+        TweenMax.to(overlay.current, 0.2, { left: '-100%' })
         break
       case rightEdgeDist:
-        TweenMax.to(overlay.current, 0.5, { left: '100%' })
+        TweenMax.to(overlay.current, 0.2, { left: '100%' })
         break
       case topEdgeDist:
-        TweenMax.to(overlay.current, 0.5, { top: '-100%' })
+        TweenMax.to(overlay.current, 0.2, { top: '-100%' })
         break
       case bottomEdgeDist:
-        TweenMax.to(overlay.current, 0.5, { top: '100%' })
+        TweenMax.to(overlay.current, 0.2, { top: '100%' })
         break
     }
   }
@@ -108,24 +108,27 @@ class Home extends React.Component {
       case leftEdgeDist:
         overlay.current.style.top = '0%'
         overlay.current.style.left = '-100%'
-        TweenMax.to(overlay.current, 0.5, { left: '0%' })
+        TweenMax.to(overlay.current, 0.2, { left: '0%' })
         break
       case rightEdgeDist:
         overlay.current.style.top = '0%'
         overlay.current.style.left = '100%'
-        TweenMax.to(overlay.current, 0.5, { left: '0%' })
+        TweenMax.to(overlay.current, 0.2, { left: '0%' })
         break
       case topEdgeDist:
         overlay.current.style.top = '-100%'
         overlay.current.style.left = '0%'
-        TweenMax.to(overlay.current, 0.5, { top: '0%' })
+        TweenMax.to(overlay.current, 0.2, { top: '0%' })
         break
       case bottomEdgeDist:
         overlay.current.style.top = '100%'
         overlay.current.style.left = '0%'
-        TweenMax.to(overlay.current, 0.5, { top: '0%' })
+        TweenMax.to(overlay.current, 0.2, { top: '0%' })
         break
     }
+  }
+  componentDidMount() {
+      window.scrollTo(0, 0)
   }
   render () {
     return (

@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
-    <div className='cta_container'>
+    <div className='about_container'>
       <h3>History</h3>
       <p>
         Pepe’s was founded in Southern California in 1962 by two brothers, Joe

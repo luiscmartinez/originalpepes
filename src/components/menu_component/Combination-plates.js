@@ -68,7 +68,7 @@ const Combination_plates = () => {
         </li>
         <span>* comes with your choice of tortillas</span>
       </ul>
-      <Link className='link' to='/menu'>
+      <Link className={window.location.pathname === '/menu' ? 'hidden' : 'link'} to='/menu'>
         VIEW FULL MENU &#8594;
       </Link>
     </div>
