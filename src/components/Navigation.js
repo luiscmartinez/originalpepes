@@ -5,21 +5,21 @@ const Navigation = () => {
   return (
     <div className='nav'>
       <div className='inner_nav'>
-        <div>
+        <h2>
           <Link to='/'>HOME</Link>
-        </div>
-        <div>
+        </h2>
+        <h2>
           <Link to='/menu'>MENU</Link>
-        </div>
-        <div>
+        </h2>
+        <h2>
           <Link to='/catering'>CATERING</Link>
-        </div>
-        <div>
+        </h2>
+        <h2>
           <Link to='/about'>ABOUT</Link>
-        </div>
-        <div>
+        </h2>
+        <h2>
           <Link to='/contact'>CONTACT</Link>
-        </div>
+        </h2>
       </div>
     </div>
   )
