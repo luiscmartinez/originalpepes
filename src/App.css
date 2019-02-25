@@ -170,10 +170,12 @@ body {
   align-items: center;
   letter-spacing: 2px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .inner_nav a {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 .inner_nav h2> a {
   text-decoration: none;
@@ -192,6 +194,9 @@ body {
   border-radius: 5px;
   transform: scaleX(0);
   transition: .25s linear;
+}
+.footer .nav .inner_nav h2 > a:before{
+  background: white;
 }
 .inner_nav h2 > a:hover:before,
 h2 > a:focus:before {
@@ -318,9 +323,10 @@ input {
   flex-direction: column;
   align-items: center;
 }
-.footer a {
+.footer .nav .inner_nav a {
   color: white;
 }
+
 footer {
   color: #6f6f6f;
 }

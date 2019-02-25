@@ -6,19 +6,19 @@ const Navigation = () => {
     <div className='nav'>
       <div className='inner_nav'>
         <h2>
-          <Link to='/'>HOME</Link>
+          <Link to='/'>home</Link>
         </h2>
         <h2>
-          <Link to='/menu'>MENU</Link>
+          <Link to='/menu'>menu</Link>
         </h2>
         <h2>
-          <Link to='/catering'>CATERING</Link>
+          <Link to='/catering'>catering</Link>
         </h2>
         <h2>
-          <Link to='/about'>ABOUT</Link>
+          <Link to='/about'>about</Link>
         </h2>
         <h2>
-          <Link to='/contact'>CONTACT</Link>
+          <Link to='/contact'>contact</Link>
         </h2>
       </div>
     </div>
