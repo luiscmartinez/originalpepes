@@ -145,7 +145,7 @@ body {
   .home_cta {
     font-size: 3rem;
     letter-spacing: 1px;
-    padding: 80px 2px;
+    padding: 80px 0px;
   }
 }
 .logo {
