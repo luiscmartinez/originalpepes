@@ -5,7 +5,7 @@ import Navigation from './Navigation'
 const Footer = () => {
   return (
     <div className='footer'>
-      <Link to='/home'>
+      <Link to='/'>
         <img
           style={{ width: '200px' }}
           src='http://theoriginalpepes.com/wp-content/uploads/2016/07/final_pepes-logo.png'

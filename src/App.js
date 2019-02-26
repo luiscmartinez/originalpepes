@@ -37,12 +37,14 @@ class App extends Component {
     return (
       <div className='main_div'>
         <div className={this.handleClassName()}>
-          <img
-            className='logo'
-            src={
-              'http://theoriginalpepes.com/wp-content/uploads/2016/07/new_logo.png'
-            }
-          />
+          <Link to='/'>
+            <img
+              className='logo'
+              src={
+                'http://theoriginalpepes.com/wp-content/uploads/2016/07/new_logo.png'
+              }
+            />
+          </Link>
         </div>
         <Navigation />
         {/* <div className='cta'> */}
