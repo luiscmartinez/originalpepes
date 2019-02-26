@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom'
 
 const Combination_plates = () => {
   return (
-    <div className={'cta_container'}>
+    <div
+      className={
+        window.location.pathname === '/menu' ? 'none' : 'cta_container'
+      }
+    >
       <h3 className='headers'>COMBINATION PLATES </h3>
       <p>
         All Plates Come With Beans, Cheese, Rice with Green Sauce & Guacamole

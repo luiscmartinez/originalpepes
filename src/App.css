@@ -18,7 +18,9 @@ body {
   padding-bottom: 66.38%;
   font-size: 1.6rem;
 }
-
+.cta {
+  max-width: 1000px;
+}
 .home_container {
   width: 100%;
   display: flex;
@@ -34,7 +36,7 @@ body {
   background-color: white;
   display: flex;
   flex-flow: wrap;
-  width: 75%;
+  max-width: 1000px;
   border: 2px solid brown;
 }
 .grid {
@@ -176,7 +178,7 @@ body {
   align-items: center;
   letter-spacing: 2px;
   font-weight: 700;
-  font-size: 10px;
+  font-size: 0.6rem;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -209,20 +211,12 @@ h2 > a:focus:before {
   visibility: visible;
   transform: scaleX(1);
 }
-.cartering_container {
-  max-width: 1000px;
-  border: 2px solid aqua;
-  display: flex;
-  /* justify-content: center; */
-  flex-direction: column;
-  font-size: 20px;
-}
 
 .headers {
   align-self: center;
   letter-spacing: 8px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 .headers::before {
@@ -239,14 +233,6 @@ h2 > a:focus:before {
   position: relative;
   top: 3px;
 }
-.cartering_container h4 {
-  margin: 0;
-  -webkit-align-self: auto;
-  align-self: left;
-}
-.cartering_container p {
-  margin-bottom: 30px;
-}
 /* =====Combination_plates======== */
 .cta_container {
   border: 2px solid blue;
@@ -256,26 +242,7 @@ h2 > a:focus:before {
   padding: 90px;
   width: 65%;
 }
-.about_container {
-  padding: 8%;
-  margin: 0 auto;
-  max-width: 1000px;
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.about_container p {
-  font-size: 19px;
-  line-height: 26px;
-  font-weight: 600;
-}
-.about_container h3 {
-  font-weight: 400;
-  color: black;
-  margin-bottom: 20px;
-}
+
 .hidden {
   display: none;
 }

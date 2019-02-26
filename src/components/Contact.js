@@ -5,7 +5,7 @@ const Contact = () => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <div>
+    <div className='cta_container'>
       <div>
         <div className='left'>
           <h3>Drop us a line.</h3>

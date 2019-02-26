@@ -5,7 +5,7 @@ const About = () => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <div>
+    <div className='cta_container'>
       <p>
         <h3>History</h3>
         Pepe’s was founded in Southern California in 1962 by two brothers, Joe
