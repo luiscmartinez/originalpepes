@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import foodplate from '../images/food_plate (1).jpg'
 
 const About = () => {
   useEffect(() => {
@@ -36,10 +37,9 @@ const About = () => {
       </p>
       <img
         class='aligncenter'
-        src='http://theoriginalpepes.com/wp-content/uploads/2016/07/DSC9697-1024x680.jpg'
+        src={foodplate}
         width='400'
         height='266'
-        srcset='http://theoriginalpepes.com/wp-content/uploads/2016/07/DSC9697-1024x680.jpg 1024w, http://theoriginalpepes.com/wp-content/uploads/2016/07/DSC9697-300x199.jpg 300w, http://theoriginalpepes.com/wp-content/uploads/2016/07/DSC9697-768x510.jpg 768w, http://theoriginalpepes.com/wp-content/uploads/2016/07/DSC9697-500x332.jpg 500w'
         sizes='(max-width: 400px) 100vw, 400px'
       />
     </div>

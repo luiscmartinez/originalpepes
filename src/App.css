@@ -54,11 +54,11 @@ body {
 }
 @media (max-width: 800px) {
   .grid_container {
-    width: 500px;
+    width: 490px;
     padding: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 505  px) {
   .grid_container {
     padding: 0;
     width: 300px;

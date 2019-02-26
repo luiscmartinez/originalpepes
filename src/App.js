@@ -8,6 +8,7 @@ import Menu from './components/Menu'
 import Cartering from './components/Cartering'
 import About from './components/About'
 import Contact from './components/Contact'
+import logo from './images/new_logo.png'
 
 class App extends Component {
   handleClassName = () => {
@@ -38,12 +39,7 @@ class App extends Component {
       <div className='main_div'>
         <div className={this.handleClassName()}>
           <Link to='/'>
-            <img
-              className='logo'
-              src={
-                'http://theoriginalpepes.com/wp-content/uploads/2016/07/new_logo.png'
-              }
-            />
+            <img className='logo' src={logo} />
           </Link>
         </div>
         <Navigation />

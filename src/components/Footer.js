@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navigation from './Navigation'
+import logo from '../images/new_logo.png'
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
       <Link to='/'>
         <img
           style={{ width: '200px' }}
-          src='http://theoriginalpepes.com/wp-content/uploads/2016/07/final_pepes-logo.png'
+          src={logo}
           alt='The Original Pepe'
           className='site-logo'
         />
