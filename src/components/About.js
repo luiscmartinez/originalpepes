@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className='cta_container'>
       <p>
-        <h3>History</h3>
+        <h3 style={{ color: 'black' }}>History</h3>
         Pepe’s was founded in Southern California in 1962 by two brothers, Joe
         and Tony Russi. The restaurant was originally named “El Adobe” and in
         1963 renamed “El Jardin”, the location was changed several times finally
@@ -35,7 +35,7 @@ const About = () => {
         today.
       </p>
       <img
-        class='aligncenter wp-image-268'
+        class='aligncenter'
         src='http://theoriginalpepes.com/wp-content/uploads/2016/07/DSC9697-1024x680.jpg'
         width='400'
         height='266'
