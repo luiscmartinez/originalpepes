@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Combination_plates = () => {
   return (
-    <div className='cta_container'>
-      <h3>* * COMBINATION PLATES * *</h3>
+    <div className={'cta_container'}>
+      <h3 className='headers'>COMBINATION PLATES </h3>
       <p>
         All Plates Come With Beans, Cheese, Rice with Green Sauce & Guacamole
       </p>
@@ -68,7 +68,10 @@ const Combination_plates = () => {
         </li>
         <span>* comes with your choice of tortillas</span>
       </ul>
-      <Link className={window.location.pathname === '/menu' ? 'hidden' : 'link'} to='/menu'>
+      <Link
+        className={window.location.pathname === '/menu' ? 'hidden' : 'link'}
+        to='/menu'
+      >
         VIEW FULL MENU &#8594;
       </Link>
     </div>

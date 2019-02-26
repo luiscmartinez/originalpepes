@@ -44,12 +44,14 @@ class App extends Component {
             }
           />
         </div>
+        {/* <div className='cta'> */}
         <Navigation />
         <Route exact path='/' component={Home} />
         <Route path='/menu' component={Menu} />
         <Route path='/catering' component={Cartering} />
         <Route path='/about' component={About} />
         <Route path='/contact' component={Contact} />
+        {/* </div> */}
         <Footer className='footer' />
       </div>
     )

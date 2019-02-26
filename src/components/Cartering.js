@@ -5,13 +5,13 @@ const Cartering = () => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <div className='cartering_container'>
+    <div>
       <p>
         Contact us for all of your catering needs. Everything is pre-packaged
         with chips, salsa and utensils. Everything you need to have a successful
         event. CALL FOR PRICING
       </p>
-      <h3>CATERING MENU **</h3>
+      <h3 className='headers'>CATERING MENU</h3>
       <h4>BURRITOS</h4>
       <p>
         <strong>Tray of mini Burritos</strong>(14 in total)<br />Comes with

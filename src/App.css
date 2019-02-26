@@ -1,7 +1,13 @@
 body {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
-* {margin:0;padding:0;border:0 none;position: relative; outline: none;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  position: relative;
+  outline: none;
 }
 .main_div {
   display: flex;
@@ -10,11 +16,9 @@ body {
   border: 2px solid red;
   width: 100%;
   padding-bottom: 66.38%;
-  /* width: 1000px; */
+  font-size: 1.6rem;
 }
-/* a {
-  text-decoration: none;
-} */
+
 .home_container {
   width: 100%;
   display: flex;
@@ -30,7 +34,8 @@ body {
   background-color: white;
   display: flex;
   flex-flow: wrap;
-  max-width: 1000px;
+  width: 75%;
+  border: 2px solid brown;
 }
 .grid {
   height: 13.8rem;
@@ -74,6 +79,7 @@ body {
 .circle:hover {
   background-color: #1a4680;
 }
+
 .home_cta {
   display: block;
   background-color: white;
@@ -177,7 +183,7 @@ body {
 .inner_nav a {
   padding-bottom: 10px;
 }
-.inner_nav h2> a {
+.inner_nav h2 > a {
   text-decoration: none;
   color: black;
   z-index: 1;
@@ -195,7 +201,7 @@ body {
   transform: scaleX(0);
   transition: .25s linear;
 }
-.footer .nav .inner_nav h2 > a:before{
+.footer .nav .inner_nav h2 > a:before {
   background: white;
 }
 .inner_nav h2 > a:hover:before,
@@ -204,38 +210,39 @@ h2 > a:focus:before {
   transform: scaleX(1);
 }
 .cartering_container {
-  max-width: 50%;
+  max-width: 1000px;
   border: 2px solid aqua;
-  display:flex;
+  display: flex;
   /* justify-content: center; */
   flex-direction: column;
   font-size: 20px;
 }
-.cartering_container h3 {
-  align-self:center;
+
+.headers {
+  align-self: center;
   letter-spacing: 8px;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 400;
 }
-.cartering_container h3:before {
+.headers::before {
   content: "* * ";
-  font-wight:400;
+  font-wight: 400;
   letter-spacing: 3px;
   position: relative;
   top: 3px;
 }
-.cartering_container h3:after {
+.headers::after {
   content: "* *";
-  font-wight:400;
+  font-wight: 400;
   letter-spacing: 3px;
   position: relative;
   top: 3px;
 }
 .cartering_container h4 {
   margin: 0;
--webkit-align-self: auto;
-    align-self: left;
+  -webkit-align-self: auto;
+  align-self: left;
 }
 .cartering_container p {
   margin-bottom: 30px;
@@ -245,26 +252,32 @@ h2 > a:focus:before {
   border: 2px solid blue;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  align-self: center;
   background: white;
   padding: 90px;
+  width: 65%;
 }
 .about_container {
   padding: 8%;
   margin: 0 auto;
   max-width: 1000px;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.about_container p{
+.about_container p {
   font-size: 19px;
   line-height: 26px;
-  /* font-weight: 500; */
+  font-weight: 600;
 }
 .about_container h3 {
   font-weight: 400;
+  color: black;
+  margin-bottom: 20px;
 }
 .hidden {
-  display:none;
+  display: none;
 }
 .cta_container h3,
 h4 {

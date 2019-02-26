@@ -19,7 +19,7 @@ const Menu = () => {
           </p>
         </li>
       </ul>
-      <h3>* * LUNCH & DINNER * *</h3>
+      <h3 className='headers'>LUNCH & DINNER</h3>
       <h4>A LA CARTE</h4>
       <ul>
         <li>
@@ -145,7 +145,7 @@ const Menu = () => {
         </li>
         <li>Bacon on any Item</li>
       </ul>
-      <h3>* * BREAKFAST * *</h3>
+      <h3 className='headers'>BREAKFAST</h3>
       <p>SERVED ALL DAY STARTING AT 6AM</p>
       <h4>BREAKFAST BURRITOS</h4>
       <ul>
@@ -156,7 +156,7 @@ const Menu = () => {
           </p>
         </li>
         <li>
-          <strong>PEPE'S BREAKFAST BURRITO</strong>{' '}
+          <strong>PEPE'S BREAKFAST BURRITO</strong>
           <p>
             Ham, Bacon or Sausage, Eggs, Potatoes, Beans, Cheese, Rice,
             Guacamole & Green Sauce Wet
@@ -192,7 +192,7 @@ const Menu = () => {
       </p>
       <ul>
         <li>
-          <strong>PEPE'S BREAKFAST PLATE</strong>{' '}
+          <strong>PEPE'S BREAKFAST PLATE</strong>
           <p>Ham, Bacon or Sausage, Eggs, Potatoes, Cheese & Green Sauce</p>
         </li>
         <li>

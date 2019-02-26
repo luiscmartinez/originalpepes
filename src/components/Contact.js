@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 
 const Contact = () => {
   useEffect(() => {
@@ -6,7 +6,7 @@ const Contact = () => {
   }, [])
   return (
     <div>
-      <div className='content_container'>
+      <div>
         <div className='left'>
           <h3>Drop us a line.</h3>
           <p>
@@ -22,7 +22,7 @@ const Contact = () => {
         </div>
         <h1 className='right'>HERE WILL GO THE MAP</h1>
       </div>
-      <div className='content_container'>
+      <div>
         <img
           className='lol'
           src='http://theoriginalpepes.com/wp-content/uploads/2016/07/DSC9697.jpg'

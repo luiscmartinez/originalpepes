@@ -1,13 +1,13 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <div className='about_container'>
-      <h3>History</h3>
+    <div>
       <p>
+        <h3>History</h3>
         Pepe’s was founded in Southern California in 1962 by two brothers, Joe
         and Tony Russi. The restaurant was originally named “El Adobe” and in
         1963 renamed “El Jardin”, the location was changed several times finally
