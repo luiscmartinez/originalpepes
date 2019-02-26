@@ -172,7 +172,7 @@ body {
   /* border: 2px solid hotpink; */
   width: 100%;
   height: 550px;
-  background-image: url('./images/home_hero\ \(1\).jpg');
+  background-image: url('./images/menu_hero\ \(1\).jpg');
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -221,7 +221,7 @@ body {
   width: 100%;
 }
 .inner_nav {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
