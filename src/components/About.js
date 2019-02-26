@@ -41,6 +41,7 @@ const About = () => {
         width='400'
         height='266'
         sizes='(max-width: 400px) 100vw, 400px'
+        alt='food plate'
       />
     </div>
   )
