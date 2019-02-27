@@ -13,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 2px solid red; */
   width: 100%;
   font-size: 1rem;
 }
@@ -25,9 +24,7 @@ body {
 .cta {
   max-width: 1000px;
 }
-/* @media (max-width: 500px) {
-  max
-} */
+
 .home_container {
   width: 100%;
   display: flex;
@@ -66,8 +63,6 @@ body {
 }
 .grid {
   height: 13.8rem;
-  /* margin: 10px; */
-  /* width: 100%; */
 }
 .boxes {
   /* display: block; */
@@ -158,7 +153,6 @@ body {
   }
 }
 .pimg1 {
-  /* border: 2px solid hotpink; */
   width: 100%;
   height: 550px;
   background-image: url('./images/home_hero\ \(1\).jpg');
@@ -169,7 +163,6 @@ body {
   justify-content: center;
 }
 .pimg2 {
-  /* border: 2px solid hotpink; */
   width: 100%;
   height: 550px;
   background-image: url('./images/menu_hero\ \(1\).jpg');
@@ -180,7 +173,6 @@ body {
   justify-content: center;
 }
 .pimg3 {
-  /* border: 2px solid hotpink; */
   width: 100%;
   height: 550px;
   background-image: url('images/catering_hero\ \(1\).jpg');
@@ -191,7 +183,6 @@ body {
   justify-content: center;
 }
 .pimg4 {
-  /* border: 2px solid hotpink; */
   width: 100%;
   height: 550px;
   background-image: url('images/about_hero\ \(1\).jpg');
@@ -202,7 +193,6 @@ body {
   justify-content: center;
 }
 .pimg5 {
-  /* border: 2px solid hotpink; */
   width: 100%;
   height: 550px;
   background-image: url('images/contact_hero\ \(1\).jpg');
@@ -216,12 +206,10 @@ body {
 .nav {
   display: flex;
   justify-content: center;
-  /* border: 2px solid goldenrod; */
   height: 105px;
   width: 100%;
 }
 .inner_nav {
-  /* border: 2px solid green; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
