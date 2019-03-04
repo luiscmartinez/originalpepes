@@ -34,7 +34,9 @@ class Home extends React.Component {
     this.overlay8 = React.createRef()
     this.overlay9 = React.createRef()
   }
-
+  componentDidMount () {
+    window.scrollTo(0, 0)
+  }
   _onMouseMove = (e, ref, overlay) => {
     const edge = this.closestEdge(ref, e, overlay)
     console.log(edge)
@@ -127,9 +129,6 @@ class Home extends React.Component {
         break
     }
   }
-  componentDidMount () {
-    window.scrollTo(0, 0)
-  }
   render () {
     return (
       <div className='home_container'>
@@ -140,6 +139,7 @@ class Home extends React.Component {
         <div className='grid_container'>
           <div
             className='boxes'
+            onClick={(e) => this.handleEvent(e)}
             onMouseEnter={(e) => this._onMouseMove(e, this.myRef, this.overlay)}
             onMouseLeave={(e) =>
               this._onMouseLeave(e, this.myRef, this.overlay)}

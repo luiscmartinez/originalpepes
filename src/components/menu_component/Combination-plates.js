@@ -51,7 +51,7 @@ const Combination_plates = () => {
           <p>With Fresh Salsa</p>
         </li>
         <li>
-          <strong>#12 CARME ASADA*</strong>
+          <strong>#12 CARNE ASADA*</strong>
           <p>With Fresh Salsa</p>
         </li>
         <li>
