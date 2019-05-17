@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navigation from './components/Navigation'
 import './App.css'
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'
 import Home from './components/Home'
 import Footer from './components/Footer'
 import Menu from './components/Menu'
@@ -32,7 +32,7 @@ class App extends Component {
         break
     }
   }
-  render () {
+  render() {
     console.log(window.location.pathname === '/')
 
     return (
@@ -43,11 +43,13 @@ class App extends Component {
           </Link>
         </div>
         <Navigation />
-        <Route exact path='/' component={Home} />
-        <Route path='/menu' component={Menu} />
-        <Route path='/catering' component={Cartering} />
-        <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/menu' component={Menu} />
+          <Route path='/catering' component={Cartering} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={Contact} />
+        </Switch>
         <Footer className='footer' />
       </div>
     )
