@@ -521,14 +521,14 @@ footer {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 2;
+  z-index: ;
   text-align: center;
   display: flex;
   align-items: center;
 }
 
 .modal img {
-  z-index: 1;
+  z-index: 2;
   margin: 0 auto;
   margin-top: 5%;
   width: 100%;

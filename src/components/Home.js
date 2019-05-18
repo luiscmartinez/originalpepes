@@ -144,6 +144,18 @@ class Home extends React.Component {
     }
   }
   render() {
+    if (this.state.img) {
+      // if modal is mounted, all overlays move out
+      TweenMax.to(this.overlay.current, 0, { left: '-100%' })
+      TweenMax.to(this.overlay2.current, 0, { left: '-100%' })
+      TweenMax.to(this.overlay3.current, 0, { left: '-100%' })
+      TweenMax.to(this.overlay4.current, 0, { left: '-100%' })
+      TweenMax.to(this.overlay5.current, 0, { left: '-100%' })
+      TweenMax.to(this.overlay6.current, 0, { left: '-100%' })
+      TweenMax.to(this.overlay7.current, 0, { left: '-100%' })
+      TweenMax.to(this.overlay8.current, 0, { left: '-100%' })
+      TweenMax.to(this.overlay9.current, 0, { left: '-100%' })
+    }
     return (
       <div className='home_container'>
         {this.state.toggle && (
