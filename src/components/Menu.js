@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Combination_plates from './menu_component/Combination-plates'
 
 const Menu = () => {
+  // renders component to top of window position
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])

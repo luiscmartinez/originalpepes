@@ -6,14 +6,15 @@ import tacos_img from '../images/home_hero (1).jpg'
 import green_salsa from '../images/green_salsa (1).jpg'
 import chips from '../images/about_hero (1).jpg'
 import taquitos from '../images/taquitos (1).jpg'
-import orange_salsa from '../images/catering_hero (1).jpg'
+import orange_salsa from '../images/catering_hero.jpg'
 import burrito from '../images/menu_hero (1).jpg'
 import red_salsa from '../images/contact_hero (1).jpg'
 import chiles from '../images/chiles (1).jpg'
 import { TweenMax } from 'gsap'
+import Modal from './portal'
 
 class Home extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.myRef = React.createRef()
     this.myRef2 = React.createRef()
@@ -33,21 +34,34 @@ class Home extends React.Component {
     this.overlay7 = React.createRef()
     this.overlay8 = React.createRef()
     this.overlay9 = React.createRef()
+    this.node = React.createRef()
+    this.state = {
+      toggle: false,
+      img: null,
+    }
   }
-  componentDidMount () {
+
+  handleRefClick = e => {
+    console.log('handleRefClick was called')
+    console.log(this.node.current)
+    if (this.node.current) {
+      this.setState({ toggle: false, img: null })
+    }
+  }
+  componentDidMount() {
     window.scrollTo(0, 0)
   }
   _onMouseMove = (e, ref, overlay) => {
     const edge = this.closestEdge(ref, e, overlay)
-    console.log(edge)
+    // console.log(edge)
   }
   _onMouseLeave = (e, ref, overlay) => {
     const edge = this.closestEdges(ref, e, overlay)
-    console.log(edge)
+    // console.log(edge)
   }
   closestEdges = (elem, e, overlay) => {
     const elemBounding = elem.current.getBoundingClientRect()
-    console.log(elemBounding)
+    // console.log(elemBounding)
 
     const elementLeftEdge = elemBounding.left
     const elementTopEdge = elemBounding.top
@@ -85,7 +99,7 @@ class Home extends React.Component {
   }
   closestEdge = (elem, e, overlay) => {
     const elemBounding = elem.current.getBoundingClientRect()
-    console.log(elemBounding)
+    // console.log(elemBounding)
 
     const elementLeftEdge = elemBounding.left
     const elementTopEdge = elemBounding.top
@@ -129,9 +143,20 @@ class Home extends React.Component {
         break
     }
   }
-  render () {
+  render() {
     return (
       <div className='home_container'>
+        {this.state.toggle && (
+          <Modal>
+            <div
+              onClick={this.handleRefClick}
+              ref={this.node}
+              className='modal'
+            >
+              <img src={this.state.img} />
+            </div>
+          </Modal>
+        )}
         <Combination_plates />
         <div className='home_cta'>
           <strong>FINEST MEXICAN GRILL</strong>
@@ -139,10 +164,8 @@ class Home extends React.Component {
         <div className='grid_container'>
           <div
             className='boxes'
-            onClick={(e) => this.handleEvent(e)}
-            onMouseEnter={(e) => this._onMouseMove(e, this.myRef, this.overlay)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef, this.overlay)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef, this.overlay)}
+            onMouseLeave={e => this._onMouseLeave(e, this.myRef, this.overlay)}
             ref={this.myRef}
           >
             <img
@@ -151,7 +174,13 @@ class Home extends React.Component {
               src={image}
               alt='enchilada plate'
             />
-            <div ref={this.overlay} className='overlay'>
+            <div
+              onClick={e => {
+                this.setState({ toggle: true, img: image })
+              }}
+              ref={this.overlay}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>
@@ -159,14 +188,20 @@ class Home extends React.Component {
           </div>
           <div
             className='boxes'
-            onMouseEnter={(e) =>
-              this._onMouseMove(e, this.myRef2, this.overlay2)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef2, this.overlay2)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef2, this.overlay2)}
+            onMouseLeave={e =>
+              this._onMouseLeave(e, this.myRef2, this.overlay2)
+            }
             ref={this.myRef2}
           >
             <img className='grid' src={tacos_img} alt='tacos' />
-            <div ref={this.overlay2} className='overlay'>
+            <div
+              onClick={e => {
+                this.setState({ toggle: true, img: tacos_img })
+              }}
+              ref={this.overlay2}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>
@@ -174,14 +209,21 @@ class Home extends React.Component {
           </div>
           <div
             className='boxes'
-            onMouseEnter={(e) =>
-              this._onMouseMove(e, this.myRef3, this.overlay3)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef3, this.overlay3)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef3, this.overlay3)}
+            onMouseLeave={e =>
+              this._onMouseLeave(e, this.myRef3, this.overlay3)
+            }
             ref={this.myRef3}
           >
             <img className='grid' src={green_salsa} alt='green salsa' />
-            <div ref={this.overlay3} className='overlay'>
+            <div
+              onClick={e => {
+                console.log('inside onClick ')
+                this.setState({ toggle: true, img: green_salsa })
+              }}
+              ref={this.overlay3}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>
@@ -190,14 +232,20 @@ class Home extends React.Component {
           <br />
           <div
             className='boxes'
-            onMouseEnter={(e) =>
-              this._onMouseMove(e, this.myRef4, this.overlay4)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef4, this.overlay4)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef4, this.overlay4)}
+            onMouseLeave={e =>
+              this._onMouseLeave(e, this.myRef4, this.overlay4)
+            }
             ref={this.myRef4}
           >
             <img className='grid' src={chips} alt='chips & salsa' />
-            <div ref={this.overlay4} className='overlay'>
+            <div
+              onClick={e => {
+                this.setState({ toggle: true, img: chips })
+              }}
+              ref={this.overlay4}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>
@@ -205,14 +253,20 @@ class Home extends React.Component {
           </div>
           <div
             className='boxes'
-            onMouseEnter={(e) =>
-              this._onMouseMove(e, this.myRef5, this.overlay5)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef5, this.overlay5)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef5, this.overlay5)}
+            onMouseLeave={e =>
+              this._onMouseLeave(e, this.myRef5, this.overlay5)
+            }
             ref={this.myRef5}
           >
             <img className='grid' src={taquitos} alt='taquitos and guac' />
-            <div ref={this.overlay5} className='overlay'>
+            <div
+              onClick={e => {
+                this.setState({ toggle: true, img: taquitos })
+              }}
+              ref={this.overlay5}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>
@@ -220,14 +274,20 @@ class Home extends React.Component {
           </div>
           <div
             className='boxes'
-            onMouseEnter={(e) =>
-              this._onMouseMove(e, this.myRef6, this.overlay6)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef6, this.overlay6)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef6, this.overlay6)}
+            onMouseLeave={e =>
+              this._onMouseLeave(e, this.myRef6, this.overlay6)
+            }
             ref={this.myRef6}
           >
             <img className='grid' src={orange_salsa} alt='orange_salsa' />
-            <div ref={this.overlay6} className='overlay'>
+            <div
+              onClick={e => {
+                this.setState({ toggle: true, img: orange_salsa })
+              }}
+              ref={this.overlay6}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>
@@ -236,14 +296,20 @@ class Home extends React.Component {
           <br />
           <div
             className='boxes'
-            onMouseEnter={(e) =>
-              this._onMouseMove(e, this.myRef7, this.overlay7)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef7, this.overlay7)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef7, this.overlay7)}
+            onMouseLeave={e =>
+              this._onMouseLeave(e, this.myRef7, this.overlay7)
+            }
             ref={this.myRef7}
           >
             <img className='grid' src={burrito} alt='asada burrito' />
-            <div ref={this.overlay7} className='overlay'>
+            <div
+              onClick={e => {
+                this.setState({ toggle: true, img: burrito })
+              }}
+              ref={this.overlay7}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>
@@ -251,14 +317,20 @@ class Home extends React.Component {
           </div>
           <div
             className='boxes'
-            onMouseEnter={(e) =>
-              this._onMouseMove(e, this.myRef8, this.overlay8)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef8, this.overlay8)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef8, this.overlay8)}
+            onMouseLeave={e =>
+              this._onMouseLeave(e, this.myRef8, this.overlay8)
+            }
             ref={this.myRef8}
           >
             <img className='grid' src={red_salsa} alt='red_salsa' />
-            <div ref={this.overlay8} className='overlay'>
+            <div
+              onClick={e => {
+                this.setState({ toggle: true, img: red_salsa })
+              }}
+              ref={this.overlay8}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>
@@ -266,14 +338,20 @@ class Home extends React.Component {
           </div>
           <div
             className='boxes'
-            onMouseEnter={(e) =>
-              this._onMouseMove(e, this.myRef9, this.overlay9)}
-            onMouseLeave={(e) =>
-              this._onMouseLeave(e, this.myRef9, this.overlay9)}
+            onMouseEnter={e => this._onMouseMove(e, this.myRef9, this.overlay9)}
+            onMouseLeave={e =>
+              this._onMouseLeave(e, this.myRef9, this.overlay9)
+            }
             ref={this.myRef9}
           >
             <img className='grid' src={chips} alt='chips & salsa' />
-            <div ref={this.overlay9} className='overlay'>
+            <div
+              onClick={e => {
+                this.setState({ toggle: true, img: chips })
+              }}
+              ref={this.overlay9}
+              className='overlay'
+            >
               <div className='circle'>
                 <i className='fas fa-search-plus' />
               </div>

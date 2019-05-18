@@ -2,6 +2,7 @@ body {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
   position: relative;
   outline: none;
 }
+
 .main_div {
   display: flex;
   flex-direction: column;
@@ -17,14 +19,17 @@ body {
   font-size: 1rem;
   position: static;
 }
+
 @media (max-width: 500px) {
   .main_div {
     font-size: 0.8rem;
   }
 }
+
 .cta {
   max-width: 1000px;
 }
+
 .svg {
   display: none;
 }
@@ -40,6 +45,7 @@ body {
     /* border: 2px solid red; */
     background-color: white;
   }
+
   .svg:hover {
     cursor: pointer;
   }
@@ -54,6 +60,7 @@ body {
   align-items: center;
   padding-top: 100px;
 }
+
 .grid_container {
   margin-top: 50px;
   padding: 50px;
@@ -63,27 +70,32 @@ body {
   width: 1000px;
   border: 2px solid brown;
 }
+
 @media (max-width: 1150px) {
   .grid_container {
     width: 720px;
     padding: 0;
   }
 }
+
 @media (max-width: 800px) {
   .grid_container {
     width: 490px;
     padding: 0;
   }
 }
+
 @media (max-width: 505px) {
   .grid_container {
     padding: 0;
     width: 300px;
   }
 }
+
 .grid {
   height: 13.8rem;
 }
+
 .boxes {
   /* display: block; */
   width: 300px;
@@ -95,16 +107,19 @@ body {
   margin: 1.5%;
   cursor: pointer;
 }
+
 @media (max-width: 800px) {
   .boxes {
     width: 220px;
   }
 }
+
 @media (max-width: 500px) {
   .boxes {
     width: 300px;
   }
 }
+
 .overlay {
   display: flex;
   justify-content: center;
@@ -118,6 +133,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
+
 .circle {
   width: 50px;
   height: 50px;
@@ -128,6 +144,7 @@ body {
   border-radius: 50%;
   background-color: #3882ed;
 }
+
 .circle:hover {
   background-color: #1a4680;
 }
@@ -150,28 +167,34 @@ body {
   align-self: center;
   color: black;
 }
+
 .link:hover {
   color: #51b29f;
 }
+
 @media (max-width: 500px) {
   .link {
     text-align: center;
   }
+
   .home_cta {
     font-size: 3rem;
     letter-spacing: 1px;
     padding: 80px 0px;
   }
 }
+
 .logo {
   height: 380px;
 }
+
 @media (max-width: 500px) {
   .logo {
     width: 100%;
     height: auto;
   }
 }
+
 .pimg1 {
   width: 100%;
   height: 550px;
@@ -182,6 +205,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .pimg2 {
   width: 100%;
   height: 550px;
@@ -192,16 +216,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .pimg3 {
   width: 100%;
   height: 550px;
-  background-image: url('images/catering_hero\ \(1\).jpg');
+  background-image: url('images/catering_hero.jpg');
   background-size: cover;
   background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .pimg4 {
   width: 100%;
   height: 550px;
@@ -212,10 +238,22 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .pimg5 {
   width: 100%;
   height: 550px;
   background-image: url('images/contact_hero\ \(1\).jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pimg6 {
+  width: 100%;
+  height: 550px;
+  background-image: url('images/bumble-bee-man-ay-yi-no-me-gusta.jpg');
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -229,6 +267,7 @@ body {
   height: 105px;
   width: 100%;
 }
+
 .inner_nav {
   display: flex;
   flex-direction: row;
@@ -241,6 +280,7 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
 @media (max-width: 700px) {
   .nav {
     height: 0;
@@ -250,19 +290,23 @@ body {
     display: flex;
     justify-content: flex-end;
   }
+
   .inner_nav {
     display: none;
   }
 }
+
 .inner_nav a {
   padding-bottom: 10px;
 }
-.inner_nav h2 > a {
+
+.inner_nav h2>a {
   text-decoration: none;
   color: black;
   z-index: 1;
 }
-.inner_nav h2 > a:before {
+
+.inner_nav h2>a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -275,11 +319,13 @@ body {
   transform: scaleX(0);
   transition: .25s linear;
 }
-.footer .nav .inner_nav h2 > a:before {
+
+.footer .nav .inner_nav h2>a:before {
   background: white;
 }
-.inner_nav h2 > a:hover:before,
-h2 > a:focus:before {
+
+.inner_nav h2>a:hover:before,
+h2>a:focus:before {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -308,18 +354,22 @@ h2 > a:focus:before {
   position: relative;
   top: 3px;
 }
+
 @media (max-width: 500px) {
   .headers {
     /* font-size: 0.5rem; */
     text-align: center;
   }
+
   .headers::before {
     content: "";
   }
+
   .headers::after {
     content: "";
   }
 }
+
 /* =====Combination_plates======== */
 .cta_container {
   /* border: 2px solid blue; */
@@ -329,26 +379,33 @@ h2 > a:focus:before {
   width: 75%;
   padding: 2%;
 }
+
 .contact_container {
   display: flex;
   flex-direction: column;
 }
+
 .aligncenter {
   align-self: center;
 }
+
 .hidden {
   display: none;
 }
+
 .cta_container h4 {
   align-self: center;
   margin-bottom: 80px;
 }
+
 .none h3 {
   text-align: center;
 }
+
 .cta_container ul li {
   margin: 0 0 40px 0;
 }
+
 .cta_container ul p,
 p,
 span {
@@ -360,22 +417,27 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
 .cta_container p {
   margin-bottom: 50px;
 }
+
 form {
   display: flex;
   flex-direction: column;
   width: 500px;
 }
+
 @media (max-width: 500px) {
   form {
     width: 300px;
   }
 }
+
 .contact-pic {
   height: 400px;
 }
+
 textarea {
   resize: none;
   height: 150px;
@@ -383,34 +445,42 @@ textarea {
   padding: 7px 5px;
   margin-bottom: 20px;
 }
+
 button {
   padding: 15px 0;
 }
+
 input {
   padding: 7px 5px;
   height: 25px;
   background-color: lightgray;
   margin-bottom: 30px;
 }
+
 .content_container {
   display: flex;
 }
+
 .left {
   border: 2px solid red;
   display: flex;
 }
+
 .right {
   border: 2px solid blue;
   display: flex;
 }
+
 button {
   border: 2px solid black;
   background-color: black;
   color: white;
 }
+
 button:hover {
   cursor: pointer;
 }
+
 .footer {
   background-color: #292929;
   width: 100%;
@@ -418,6 +488,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
 }
+
 .footer .nav .inner_nav a {
   color: white;
 }
@@ -425,9 +496,11 @@ button:hover {
 footer {
   color: #6f6f6f;
 }
+
 .map {
   height: 500px;
 }
+
 .info {
   width: 50%;
   display: flex;
@@ -436,6 +509,48 @@ footer {
   text-align: center;
   justify-content: center;
 }
+
 .info p {
   margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.modal img {
+  z-index: 1;
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 6px;
+}
+
+.no_match_content {
+  background-color: white;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.noMatch {
+  background-image: url('images/bumble-bee-man-ay-yi-no-me-gusta.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

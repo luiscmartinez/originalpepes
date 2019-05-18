@@ -3,6 +3,7 @@ import foodplate from '../images/food_plate (1).jpg'
 
 const About = () => {
   useEffect(() => {
+    // renders component to top of window position
     window.scrollTo(0, 0)
   }, [])
   return (

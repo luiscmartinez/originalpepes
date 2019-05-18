@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import image from '../images/map.jpg'
 
 const Contact = () => {
+  // renders component to top of window position
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -11,14 +12,19 @@ const Contact = () => {
         <div className='info'>
           <h3>Drop us a line.</h3>
           <p>
-            Contact us anytime with general<br />questions, comments, or
-            concerns, by<br /> filling out the form below. You may also <br />reach
-            us by phone at: 626-286-3055
+            Contact us anytime with general
+            <br />
+            questions, comments, or concerns, by
+            <br /> filling out the form below. You may also <br />
+            reach us by phone at: 626-286-3055
           </p>
           <h3>WE DO CATERING</h3>
           <p>
             <strong>Pepe's Mexican Food</strong>
-            <br />5829 Rosemead Blvd.<br />Temple City, CA 91780
+            <br />
+            5829 Rosemead Blvd.
+            <br />
+            Temple City, CA 91780
           </p>
         </div>
         <a

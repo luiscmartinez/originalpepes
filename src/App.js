@@ -9,34 +9,44 @@ import Cartering from './components/Cartering'
 import About from './components/About'
 import Contact from './components/Contact'
 import logo from './images/new_logo.png'
+import NoMatch from './components/NoMatch'
 
 class App extends Component {
+  // will decide what the className based on window location
+  // each class will have a different background img
+  // handleClassName will be called every time the Link component is clicked
   handleClassName = () => {
     switch (window.location.pathname) {
+      // case for Home Component
       case '/':
         return 'pimg1'
         break
+      // case for Menu Component
       case '/menu':
         return 'pimg2'
         break
+      // case for Catering Component
       case '/catering':
         return 'pimg3'
         break
+      // case for About Component
       case '/about':
         return 'pimg4'
         break
+      // case for Contact Component
       case '/contact':
         return 'pimg5'
         break
+      // case for everything else => don't do anything
       default:
+        return 'pimg6'
         break
     }
   }
   render() {
-    console.log(window.location.pathname === '/')
-
     return (
       <div className='main_div'>
+        {/* calling handleClassName to assign proper className based on Window.Location (URL) */}
         <div className={this.handleClassName()}>
           <Link to='/'>
             <img className='logo' src={logo} />
@@ -49,6 +59,7 @@ class App extends Component {
           <Route path='/catering' component={Cartering} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
+          <Route component={NoMatch} />
         </Switch>
         <Footer className='footer' />
       </div>
