@@ -52,6 +52,7 @@ class App extends Component {
             <img className='logo' src={logo} />
           </Link>
         </div>
+
         <Navigation />
         <Switch>
           <Route exact path='/' component={Home} />

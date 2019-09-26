@@ -1,15 +1,16 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Home from './Home'
+import burgerIcon from '../images/burger.svg'
+import closeIcon from '../images/close.svg'
+
 const Navigation = () => {
   return (
     <div className='nav'>
       {/* SVG will only display on moblie width */}
-      <svg className='svg' width='27' height='24'>
-        <line x1='3' y1='3' x2='24' y2='3' />
-        <line x1='3' y1='10' x2='24' y2='10' />
-        <line x1='3' y1='16' x2='24' y2='16' />
-      </svg>
+
+      <img className='burger' src={burgerIcon} />
+
       <div className='inner_nav'>
         <h2>
           <Link to='/'>home</Link>

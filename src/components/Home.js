@@ -156,6 +156,7 @@ class Home extends React.Component {
       TweenMax.to(this.overlay8.current, 0, { left: '-100%' })
       TweenMax.to(this.overlay9.current, 0, { left: '-100%' })
     }
+
     return (
       <div className='home_container'>
         {this.state.toggle && (

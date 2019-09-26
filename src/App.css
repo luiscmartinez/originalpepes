@@ -554,3 +554,17 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+.burger {
+  height: 25px;
+  margin-right: 10px;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+@media (min-width: 510px) {
+  .burger {
+    display: none;
+  }
+} 
