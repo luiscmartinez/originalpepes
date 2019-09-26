@@ -200,7 +200,6 @@ body {
   height: 550px;
   background-image: url('./images/home_hero\ \(1\).jpg');
   background-size: contain;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
   align-items: center;
