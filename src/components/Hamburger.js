@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import burgerIcon from '../images/burger.svg'
 import { Link } from 'react-router-dom'
 import { useRouter } from '../hooks'
+import useOnClickOutside from 'use-onclickoutside'
 const Hamburger = () => {
   const [isActive, setIsActive] = useState(false)
   const handleClick = e => {
@@ -12,6 +13,10 @@ const Hamburger = () => {
     history.push(link)
   }
   const { location, history } = useRouter()
+  const ref = useRef()
+  useOnClickOutside(ref, e => {
+    setIsActive(false)
+  })
 
   return (
     <div
@@ -24,7 +29,7 @@ const Hamburger = () => {
         src={burgerIcon}
       />
       <div className={isActive ? 'active_nav' : 'hide'}>
-        <div className='nav_li'>
+        <div className='nav_li' ref={ref}>
           <h2>
             <div onClick={e => handleLink('/')}>home</div>
           </h2>
