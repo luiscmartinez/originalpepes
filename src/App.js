@@ -17,6 +17,7 @@ class App extends Component {
   // each class will have a different background img
   // handleClassName will be called every time the Link component is clicked
   handleClassName = () => {
+    console.log('WTF', window.location.pathname)
     switch (window.location.pathname) {
       // case for Home Component
       case '/':
@@ -44,6 +45,7 @@ class App extends Component {
         break
     }
   }
+
   render() {
     return (
       <div className='main_div'>

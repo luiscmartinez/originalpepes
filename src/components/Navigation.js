@@ -1,17 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import Home from './Home'
+import burgerIcon from '../images/burger.svg'
 import closeIcon from '../images/close.svg'
 
 const Navigation = () => {
-  const [isActive, setIsActive] = useState(false)
-  const handleClick = e => {
-    setIsActive(true)
-  }
   return (
     <div className='nav'>
-      {/* SVG will only display on moblie width */}
-
       <div className='inner_nav'>
         <h2>
           <Link to='/'>home</Link>
