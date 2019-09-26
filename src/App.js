@@ -10,6 +10,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import logo from './images/new_logo.png'
 import NoMatch from './components/NoMatch'
+import Hamburger from './components/Hamburger'
 
 class App extends Component {
   // will decide what the className based on window location
@@ -47,12 +48,12 @@ class App extends Component {
     return (
       <div className='main_div'>
         {/* calling handleClassName to assign proper className based on Window.Location (URL) */}
+        <Hamburger />
         <div className={this.handleClassName()}>
           <Link to='/'>
             <img className='logo' src={logo} />
           </Link>
         </div>
-
         <Navigation />
         <Switch>
           <Route exact path='/' component={Home} />
