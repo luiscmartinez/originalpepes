@@ -7,7 +7,7 @@ const Contact = () => {
     window.scrollTo(0, 0)
   }, [])
   return (
-    <div className='contact_container'>
+    <div style={{ width: '100%' }} className='contact_container'>
       <div className='left'>
         <div className='info'>
           <h3>Drop us a line.</h3>
@@ -31,15 +31,16 @@ const Contact = () => {
           target='_blank'
           href='https://www.google.com/maps/place/Pepe&#39;s+Finest+Mexican+Food/@34.0788158,-118.1281073,17z/data=!4m5!3m4!1s0x80c2c538de46d673:0xc7de107608d17405!8m2!3d34.078487!4d-118.128456'
         >
-          <img className='map' src={image} alt='map' />
+          <img
+            className='map'
+            style={{ width: '100%' }}
+            src={image}
+            alt='map'
+          />
         </a>
       </div>
       <div className='right'>
-        <img
-          className='contact-pic'
-          src='http://theoriginalpepes.com/wp-content/uploads/2016/07/DSC9697.jpg'
-        />
-        <form>
+        <form style={{ width: '100%' }}>
           <input type='text' placeholder='name' />
           <input type='email' placeholder='Email' />
           <textarea placeholder='Message' />
