@@ -336,7 +336,6 @@ h2>a:focus:before {
 
 .headers::before {
   content: "* * ";
-  font-wight: 400;
   letter-spacing: 3px;
   position: relative;
   top: 3px;
@@ -344,7 +343,6 @@ h2>a:focus:before {
 
 .headers::after {
   content: "* *";
-  font-wight: 400;
   letter-spacing: 3px;
   position: relative;
   top: 3px;
