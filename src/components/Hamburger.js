@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react'
 import burgerIcon from '../images/burger.svg'
-import { Link } from 'react-router-dom'
-import { useRouter } from '../hooks'
+import { useHistory, useLocation } from "react-router-dom";
 import useOnClickOutside from 'use-onclickoutside'
+
 const Hamburger = () => {
   const [isActive, setIsActive] = useState(false)
   const handleClick = e => {
@@ -12,7 +12,9 @@ const Hamburger = () => {
     setIsActive(false)
     history.push(link)
   }
-  const { location, history } = useRouter()
+  let location = useLocation();
+  let history = useHistory();
+
   const ref = useRef()
   useOnClickOutside(ref, e => {
     setIsActive(false)
