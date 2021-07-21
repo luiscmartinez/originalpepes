@@ -1,8 +1,6 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
-import Home from './Home'
-import burgerIcon from '../images/burger.svg'
-import closeIcon from '../images/close.svg'
+import { Link } from 'react-router-dom'
+
 
 const Navigation = () => {
   return (

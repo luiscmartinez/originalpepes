@@ -1,5 +1,4 @@
 import React from 'react'
-import img from '../images/bumble-bee-man-ay-yi-no-me-gusta.jpg'
 
 export default function NoMatch() {
   return (

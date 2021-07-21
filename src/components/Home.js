@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Combination_plates from './menu_component/Combination-plates'
 import image from '../images/food_plate (1).jpg'
 import tacos_img from '../images/home_hero (1).jpg'
@@ -9,8 +8,7 @@ import taquitos from '../images/taquitos (1).jpg'
 import orange_salsa from '../images/catering_hero.jpg'
 import burrito from '../images/menu_hero (1).jpg'
 import red_salsa from '../images/contact_hero (1).jpg'
-import chiles from '../images/chiles (1).jpg'
-import { TweenMax } from 'gsap'
+import { gsap } from 'gsap'
 import Modal from './portal'
 
 class Home extends React.Component {
@@ -53,15 +51,12 @@ class Home extends React.Component {
   }
   _onMouseMove = (e, ref, overlay) => {
     const edge = this.closestEdge(ref, e, overlay)
-    // console.log(edge)
   }
   _onMouseLeave = (e, ref, overlay) => {
     const edge = this.closestEdges(ref, e, overlay)
-    // console.log(edge)
   }
   closestEdges = (elem, e, overlay) => {
     const elemBounding = elem.current.getBoundingClientRect()
-    // console.log(elemBounding)
 
     const elementLeftEdge = elemBounding.left
     const elementTopEdge = elemBounding.top
@@ -84,23 +79,23 @@ class Home extends React.Component {
 
     switch (min) {
       case leftEdgeDist:
-        TweenMax.to(overlay.current, 0.2, { left: '-100%' })
+        gsap.to(overlay.current, 0.2, { left: '-100%' })
         break
       case rightEdgeDist:
-        TweenMax.to(overlay.current, 0.2, { left: '100%' })
+        gsap.to(overlay.current, 0.2, { left: '100%' })
         break
       case topEdgeDist:
-        TweenMax.to(overlay.current, 0.2, { top: '-100%' })
+        gsap.to(overlay.current, 0.2, { top: '-100%' })
         break
       case bottomEdgeDist:
-        TweenMax.to(overlay.current, 0.2, { top: '100%' })
+        gsap.to(overlay.current, 0.2, { top: '100%' })
+        break
+      default:
         break
     }
   }
   closestEdge = (elem, e, overlay) => {
     const elemBounding = elem.current.getBoundingClientRect()
-    // console.log(elemBounding)
-
     const elementLeftEdge = elemBounding.left
     const elementTopEdge = elemBounding.top
     const elementRightEdge = elemBounding.right
@@ -124,37 +119,39 @@ class Home extends React.Component {
       case leftEdgeDist:
         overlay.current.style.top = '0%'
         overlay.current.style.left = '-100%'
-        TweenMax.to(overlay.current, 0.2, { left: '0%' })
+        gsap.to(overlay.current, 0.2, { left: '0%' })
         break
       case rightEdgeDist:
         overlay.current.style.top = '0%'
         overlay.current.style.left = '100%'
-        TweenMax.to(overlay.current, 0.2, { left: '0%' })
+        gsap.to(overlay.current, 0.2, { left: '0%' })
         break
       case topEdgeDist:
         overlay.current.style.top = '-100%'
         overlay.current.style.left = '0%'
-        TweenMax.to(overlay.current, 0.2, { top: '0%' })
+        gsap.to(overlay.current, 0.2, { top: '0%' })
         break
       case bottomEdgeDist:
         overlay.current.style.top = '100%'
         overlay.current.style.left = '0%'
-        TweenMax.to(overlay.current, 0.2, { top: '0%' })
+        gsap.to(overlay.current, 0.2, { top: '0%' })
+        break
+      default:
         break
     }
   }
   render() {
     if (this.state.img) {
       // if modal is mounted, all overlays move out
-      TweenMax.to(this.overlay.current, 0, { left: '-100%' })
-      TweenMax.to(this.overlay2.current, 0, { left: '-100%' })
-      TweenMax.to(this.overlay3.current, 0, { left: '-100%' })
-      TweenMax.to(this.overlay4.current, 0, { left: '-100%' })
-      TweenMax.to(this.overlay5.current, 0, { left: '-100%' })
-      TweenMax.to(this.overlay6.current, 0, { left: '-100%' })
-      TweenMax.to(this.overlay7.current, 0, { left: '-100%' })
-      TweenMax.to(this.overlay8.current, 0, { left: '-100%' })
-      TweenMax.to(this.overlay9.current, 0, { left: '-100%' })
+      gsap.to(this.overlay.current, 0, { left: '-100%' })
+      gsap.to(this.overlay2.current, 0, { left: '-100%' })
+      gsap.to(this.overlay3.current, 0, { left: '-100%' })
+      gsap.to(this.overlay4.current, 0, { left: '-100%' })
+      gsap.to(this.overlay5.current, 0, { left: '-100%' })
+      gsap.to(this.overlay6.current, 0, { left: '-100%' })
+      gsap.to(this.overlay7.current, 0, { left: '-100%' })
+      gsap.to(this.overlay8.current, 0, { left: '-100%' })
+      gsap.to(this.overlay9.current, 0, { left: '-100%' })
     }
 
     return (
@@ -166,7 +163,7 @@ class Home extends React.Component {
               ref={this.node}
               className='modal'
             >
-              <img src={this.state.img} />
+              <img src={this.state.img} alt="food img" />
             </div>
           </Modal>
         )}

@@ -17,32 +17,25 @@ class App extends Component {
   // each class will have a different background img
   // handleClassName will be called every time the Link component is clicked
   handleClassName = () => {
-    console.log('WTF', window.location.pathname)
     switch (window.location.pathname) {
       // case for Home Component
       case '/':
         return 'pimg1'
-        break
       // case for Menu Component
       case '/menu':
         return 'pimg2'
-        break
       // case for Catering Component
       case '/catering':
         return 'pimg3'
-        break
       // case for About Component
       case '/about':
         return 'pimg4'
-        break
       // case for Contact Component
       case '/contact':
         return 'pimg5'
-        break
       // case for everything else => don't do anything
       default:
         return 'pimg6'
-        break
     }
   }
 
@@ -53,7 +46,7 @@ class App extends Component {
         <Hamburger />
         <div className={this.handleClassName()}>
           <Link to='/'>
-            <img className='logo' src={logo} />
+            <img className='logo' src={logo} alt="business logo"/>
           </Link>
         </div>
         <Navigation />
