@@ -29,6 +29,7 @@ const Contact = () => {
         </div>
         <a
           target='_blank'
+          rel="noreferrer"
           href='https://www.google.com/maps/place/Pepe&#39;s+Finest+Mexican+Food/@34.0788158,-118.1281073,17z/data=!4m5!3m4!1s0x80c2c538de46d673:0xc7de107608d17405!8m2!3d34.078487!4d-118.128456'
         >
           <img
